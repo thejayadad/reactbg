@@ -7,6 +7,7 @@ import Create from "./pages/create/Create";
 import Register from "./pages/register/Register";
 import Login from "./pages/login/Login";
 import Details from "./pages/details/Details";
+import UpdatePost from "./pages/updatePost/UpdatePost";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/detail/:id" element={<Details />} />
+        <Route path="/updatepost/:id" element={<UpdatePost />} />
 
       </Routes>
     </div>
