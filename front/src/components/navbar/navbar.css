@@ -17,3 +17,13 @@ nav{
     font-size: 25px;
     cursor: pointer;
 }
+#menu{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#menu:hover{
+    color: white;
+    background: #402d25;
+    padding: 5px 3px;
+}
