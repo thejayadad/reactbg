@@ -1,0 +1,13 @@
+
+
+header{
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+    border-bottom: 1px solid orange;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}

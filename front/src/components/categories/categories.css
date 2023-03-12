@@ -1,0 +1,38 @@
+
+.categories-container{
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+}
+.categories{
+    width: 55%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    overflow: auto;
+}
+.categories::-webkit-scrollbar {
+    display: none;
+  }
+.cat-btn{
+    background: orange;
+    padding: 12px 24px;
+    border-radius: 15px;
+}
+.cat-tag{
+    background: orange;
+    color: white;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    gap: 10px;
+    min-width: 100px;
+
+
+}
+.cat-word{
+    margin-left: 10px;
+}
