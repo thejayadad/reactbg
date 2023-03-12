@@ -1,0 +1,55 @@
+
+
+.create-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+}
+.create-post{
+    max-width: 600px;
+    background: white;
+    margin: 10px auto;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    color: white;
+
+}
+input, textarea{
+    background: #c7866a;
+    outline: none;
+    border: none;
+    padding: 15px;
+    color: white;
+}
+select{
+    border: 1px solid #c7866a;
+    color: white;
+    background: #c7866a;
+    padding: 8px;
+}
+option{
+    color: white;
+    background: #c7866a;
+}
+.create-btn{
+    background: #c7866a;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+
+}
+
+.create-btn:hover{
+    background: #402d25;
+    color: #c7866a;
+}

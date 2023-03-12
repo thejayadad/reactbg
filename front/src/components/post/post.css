@@ -1,0 +1,46 @@
+
+.card-title, h2{
+    color: #402d25;
+    font-size: 17px;
+    font-weight: 200;
+  }
+
+  .card-title h3{
+    color: #402d25;
+    font-size: 10px;
+    font-weight: 500;
+
+  }
+#facebook{
+    color: #3b5998;
+    cursor: pointer;
+}
+#youtube{
+    color: #c4302b;
+    cursor: pointer;
+}
+
+#instagram{
+    color: #e95950;
+    cursor: pointer;
+}
+
+#twitter{
+    color: #00acee;
+    cursor: pointer;
+}
+
+#facebook:hover, #youtube:hover, #instagram:hover, #twitter:hover{
+    color: #402d25;
+}
+.reaction{
+    display: flex;
+    color: black;
+    margin-top: 15px;
+    font-size: 13px;
+    align-items: center;
+    justify-content: space-between;
+}
+.reaction span .cat-tag{
+    font-size: 13px;
+}

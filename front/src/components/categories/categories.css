@@ -13,26 +13,67 @@
     align-items: center;
     gap: 10px;
     overflow: auto;
+    border-radius: 5px;
 }
 .categories::-webkit-scrollbar {
     display: none;
   }
 .cat-btn{
-    background: orange;
+    background: #402d25;
     padding: 12px 24px;
-    border-radius: 15px;
+    border-radius: 50px;
 }
 .cat-tag{
-    background: orange;
-    color: white;
-    padding: 10px 12px;
-    border-radius: 8px;
+    border-radius: 50px;
     text-decoration: none;
     gap: 10px;
-    min-width: 100px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    font-size: 35px;
 
 
+}
+.cat-tag:hover{
+    color: #402d25;
 }
 .cat-word{
     margin-left: 10px;
+}
+#list{
+    color: orange;
+}
+#list:hover{
+    color: orangered;
+}
+
+#sports{
+    color: red;
+}
+#sports:hover{
+    color: orangered;
+
+}
+#tech{
+    color: blueviolet;
+}
+#tech:hover{
+    color: orangered;
+
+}
+#money{
+    color: yellowgreen;
+}
+#money:hover{
+    color: orangered;
+
+}
+#news{
+    color: goldenrod;
+}
+#news:hover{
+    color: orangered;
+
 }

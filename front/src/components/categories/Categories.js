@@ -7,24 +7,19 @@ const Categories = () => {
     <div className='categories-container'>
         <div className='categories'>
             <a href='/' className='cat-tag'>
-            <i class="fas fa-home"></i>
-            <span className='cat-word'>Home</span>
+            <i id="list" class="fas fa-list"></i>
             </a>
             <a href='/' className='cat-tag'>
-            <i class="fas fa-home"></i>
-            <span className='cat-word'>Home</span>
+            <i id="sports" class="fas fa-basketball-ball"></i>
             </a>
             <a href='/' className='cat-tag'>
-            <i class="fas fa-home"></i>
-            <span className='cat-word'>Home</span>
+            <i id='tech' class="fas fa-microchip"></i>
             </a>
             <a href='/' className='cat-tag'>
-            <i class="fas fa-home"></i>
-            <span className='cat-word'>Home</span>
+            <i id='news' class="fas fa-newspaper"></i>
             </a>
             <a href='/' className='cat-tag'>
-            <i class="fas fa-home"></i>
-            <span className='cat-word'>Home</span>
+            <i id='money' class="fas fa-money-check-alt"></i>
             </a>
         </div>
 

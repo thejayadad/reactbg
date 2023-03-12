@@ -1,0 +1,16 @@
+
+
+
+.post-section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .post-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
