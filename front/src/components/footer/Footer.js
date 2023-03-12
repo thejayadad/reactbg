@@ -5,46 +5,19 @@ import {Link} from "react-router-dom"
 const Footer = () => {
   return (
     <footer className='footer'>
-
-     <div className='row'>
-     <div className='footer-col'>
-        <h4>Categories</h4>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-        </ul>
-      </div>
-      <div className='footer-col'>
-        <h4>Categories</h4>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-        </ul>
-      </div>
-      <div className='footer-col'>
-        <h4>Categories</h4>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/">Home</Link></li>
-        </ul>
-      </div>
-      <div className='footer-col'>
-        <h4>Follow Us</h4>
-        <ul className='footer-links'>
-          <li><Link to="/">Instagram</Link></li>
-          <li><Link to="/">YouTube</Link></li>
-          <li><Link to="/">Facebook</Link></li>
-          <li><Link to="/">TikTok</Link></li>
-        </ul>
-      </div>
-
-     </div>
+      <div className='footer-content'>
+          <h3>Vent Blog</h3>
+          <p>We are a safe space to share your thoughts and feelings without being judged</p>
+          <div className='footer-social'>
+              <span><i id='facebook' class="fab fa-facebook"></i></span>
+          <span><i id='youtube' class="fab fa-youtube"></i></span>
+          <span><i id='instagram' class="fab fa-instagram"></i></span>
+          <span><i id='twitter' class="fab fa-twitter"></i></span>
+          </div>
+           <div className='footer-bottom'>
+          <p>Copyright &copy;2023 </p>
+        </div>
+    </div>
     </footer>
   )
 }
