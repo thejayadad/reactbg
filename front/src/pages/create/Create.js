@@ -25,7 +25,7 @@ const Create = () => {
 
   const categories = [
     'sports',
-     'programming',
+    'programming',
     'news',
     'finance'
   ]
@@ -72,7 +72,7 @@ const Create = () => {
 
 
       const data = await request('/blog', "POST", options, body)
-      navigate(`/detail/${data._id}`)
+      navigate("/")
 
     } catch (error) {
       console.error(error)
@@ -108,8 +108,8 @@ const Create = () => {
                   <option key={crypto.randomUUID()} value={category}>{category}</option>
                 ))}
               </select>
-              <div className={classes.inputWrapperImg}>
-              <label htmlFor='image' className={classes.labelFileInput}>
+              <div >
+              <label id="label" htmlFor='image' >
                 Image: <span>Upload here</span>
               </label>
               <input
@@ -118,7 +118,7 @@ const Create = () => {
                 onChange={onChangeFile}
                 style={{ display: 'none' }}
               />
-              {img && <p >{img.name} <AiOutlineCloseCircle className={classes.closeIcon} onClick={() => handleCloseImg()} /></p>}
+              {img && <p >{img.name} <i onClick={() => handleCloseImg()} class="fas fa-times"></i></p>}
             </div>
                 <button type='submit' className='create-btn'>Create</button>
             </form>

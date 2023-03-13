@@ -53,3 +53,9 @@ option{
     background: #402d25;
     color: #c7866a;
 }
+#label{
+    border: 1px solid #c7866a;
+    color: white;
+    background: #c7866a;
+    padding: 8px;
+}

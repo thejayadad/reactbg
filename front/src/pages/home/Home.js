@@ -10,12 +10,7 @@ const Home = () => {
         <Navbar />
         <Categories />
     <section className='post-section'>
-    <Post />
-    <Post />
-    <Post />
-    <Post />
-    <Post />
-    <Post />
+
     </section>
     <Footer />
     </div>
