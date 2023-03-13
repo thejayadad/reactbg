@@ -13,7 +13,7 @@ const Navbar = () => {
             <h2>Vent Blog</h2>
           </div>
           <div className='profile'>
-            <p>Login</p>
+            
           </div>
         </nav>
     </header>
