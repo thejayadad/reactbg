@@ -3,9 +3,84 @@ import Categories from '../../components/categories/Categories'
 import Footer from '../../components/footer/Footer'
 import Navbar from '../../components/navbar/Navbar'
 import "./create.css"
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { request } from '../../utils/fetchApi'
+import { useState } from 'react'
+
+
+
+
+
 
 
 const Create = () => {
+    const [title, setTitle] = useState("")
+  const [desc, setDesc] = useState("")
+  const [img, setImg] = useState("")
+  const [category, setCategory] = useState("")
+  const navigate = useNavigate()
+  const { token } = useSelector((state) => state.auth)
+
+
+  const categories = [
+    'sports',
+     'programming',
+    'news',
+    'finance'
+  ]
+
+  const onChangeFile = (e) => {
+    setImg(e.target.files[0])
+  }
+
+  const handleCloseImg = () => {
+    setImg(null)
+  }
+
+  const handleCreateBlog = async (e) => {
+    e.preventDefault()
+
+    try {
+      const formData = new FormData()
+
+      let filename = null
+      if (img) {
+        filename = crypto.randomUUID() + img.name
+        formData.append("filename", filename)
+        formData.append("image", img)
+
+        await fetch(`http://localhost:5000/upload`, {
+          method: "POST",
+          body: formData
+        })
+      } else {
+        return
+      }
+
+      const options = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      }
+
+      const body = {
+        title,
+        desc,
+        category,
+        photo: filename
+      }
+
+
+      const data = await request('/blog', "POST", options, body)
+      navigate(`/detail/${data._id}`)
+
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
+
+
   return (
     <div>
         <Navbar />
@@ -13,26 +88,39 @@ const Create = () => {
         <section className='create-section'>
             <h2>Create Post</h2>
         <div className='create-post'>
-            <form>
+            <form onSubmit={handleCreateBlog} encType="multipart/form-data">
                 <input
                     placeholder='Title'
+                    onChange={(e) => setTitle(e.target.value)}
+                    type="text"
                 />
                 <textarea
                 rows="5"
                 cols="30"
                 placeholder='Description'
+                onChange={(e) => setDesc(e.target.value)}
+
                 >
 
                 </textarea>
-                <select>
-                    <option>All Categories</option>
-                    <option>Sports</option>
-                    <option>Sports</option>
-                    <option>Sports</option>
-                    <option>Sports</option>
-
-                </select>
-                <button className='create-btn'>Create</button>
+                <select value={category} onChange={(e) => setCategory(e.target.value)}>
+                {categories.map((category) => (
+                  <option key={crypto.randomUUID()} value={category}>{category}</option>
+                ))}
+              </select>
+              <div className={classes.inputWrapperImg}>
+              <label htmlFor='image' className={classes.labelFileInput}>
+                Image: <span>Upload here</span>
+              </label>
+              <input
+                id="image"
+                type="file"
+                onChange={onChangeFile}
+                style={{ display: 'none' }}
+              />
+              {img && <p >{img.name} <AiOutlineCloseCircle className={classes.closeIcon} onClick={() => handleCloseImg()} /></p>}
+            </div>
+                <button type='submit' className='create-btn'>Create</button>
             </form>
         </div>
         </section>
